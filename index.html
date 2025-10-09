@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Monedas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Conversor de monedas Nacional</h1>
+        
+        <div class="conversor-card">
+            <div class="input-group">
+                <label for="montoCLP">Pesos CLP</label>
+                <input type="number" id="montoCLP" placeholder="Ingrese el monto en CLP">
+            </div>
+
+            <div class="input-group">
+                <label for="monedaSelect">Moneda a convertir:</label>
+                <select id="monedaSelect">
+                    <option value="">Seleccione moneda</option>
+                </select>
+            </div>
+
+            <button id="btnBuscar" class="btn-buscar">Buscar</button>
+
+            <div id="resultado" class="resultado"></div>
+            
+            <div id="errorContainer" class="error-container"></div>
+        </div>
+
+        <div class="grafico-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
